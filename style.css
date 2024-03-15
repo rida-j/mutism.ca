@@ -1,0 +1,192 @@
+
+/* Variables */
+
+:root {
+	--bg-color: white;
+
+}
+
+
+
+
+/*Body*/
+
+html {
+	-webkit-font-smoothing: antialiased;
+
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+
+}
+
+/* Container  */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+header {
+	padding: 20px;
+	margin: 0;
+}
+
+/* Navigation  */
+.navigation {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	height: 50px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.logo {
+	padding-top: 5px;
+}
+
+.logo img {
+	width: 130px;
+	height: auto;
+}
+
+
+.link-list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+	background-color: white;
+}
+
+.link-list-item {
+ padding: 6px;
+ list-style-type: none;
+}
+
+.call-list {
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 6px;
+	 list-style-type: none;
+}
+
+.link-list-item:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.call-list:hover {
+	background-color: lightblue;
+	cursor: pointer;
+}
+
+
+/* Content  */
+
+main {
+padding: 0;
+margin: 0;
+background: rgb(118,131,187);
+background: linear-gradient(0deg, rgba(118,131,187,1) 0%, rgba(153,173,215,1) 31%, rgba(255,255,255,1) 100%);
+height: 100vh;
+overflow: scroll;
+}
+
+
+.introduction {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+
+}
+
+.intro-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 20px;
+}
+
+h1 {
+	font-size: 64px;
+	width: 600px;
+	 margin: 80px;
+	 white-space: nowrap;
+	 font-weight: 100;
+	 margin-bottom: 0;
+	 font-family: sans-serif;
+}
+
+h3 {
+	font-size: 34px;
+	width: 600px;
+	margin-top: 0;
+	margin-bottom: 80px;
+	 margin-left: 80px;
+	 white-space: nowrap;
+	 font-weight: 100;
+	 font-family: sans-serif;
+}
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.introduction p {
+ margin: 60px;
+ padding: 20px;
+ 	 animation: fadeIn 5s;
+ /* From https://css.glass */
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.about {
+	background-color: white;
+	height: 100%;
+}
+
+
+.section-3 {
+	height: 100%;
+	background-color: blue;
+}
+
+/* Body  */
+
+
+.footer {
+background-color: yellow;
+}
