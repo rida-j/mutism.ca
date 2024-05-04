@@ -230,6 +230,9 @@ main {
 	margin: 0;
 	height: 100vh;
 	flex: 1;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
 }
 
 /* Header */
@@ -602,12 +605,16 @@ align-items: flex-start;
 	align-items: center;
 }
 
+#eventspic {
+	height: 100vh;
+}
+
 .events-intro-box {
 	background-color: var(--bg-color);
 	border-bottom: 0.3px solid var(--border-color);
 	height: 100vh;
 	width: 50vw;
-	padding: 60px;
+	padding-right: 60px;
 	padding-left: 160px;
 	display: flex;
 	flex-direction: column;
@@ -864,6 +871,7 @@ align-items: flex-start;
 
 
 .bio-box {
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
