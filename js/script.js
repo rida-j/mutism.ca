@@ -1,3 +1,35 @@
+var modalOpen = false; // State variable to prevent multiple triggers
+
+    // Get modal and buttons
+    var modal = document.getElementById('myModal');
+    var openPopup = document.getElementById('openPopup');
+    var yesButton = document.getElementById('yesButton');
+    var noButton = document.getElementById('noButton');
+
+    // Open the modal when the link is clicked
+    openPopup.addEventListener('click', function (e) {
+        if (!modalOpen) { // Check if modal is already open
+            e.preventDefault(); // Prevent the default action
+            modalOpen = true; // Set state to prevent duplicate triggers
+            modal.style.display = 'flex'; // Show the modal
+        }
+    });
+
+    // Close the modal when the "No" button is clicked
+    noButton.addEventListener('click', function () {
+        modal.style.display = 'none';
+        modalOpen = false; // Reset state when modal closes
+    });
+
+    // Redirect to the link when the "Yes" button is clicked
+    yesButton.addEventListener('click', function () {
+        modal.style.display = 'none';
+        modalOpen = false; // Reset state when modal closes
+        // Redirect to a specific URL
+        window.location.href = 'https://www.paypal.com/donate?token=jsPKX89x0R1uq4dGiecCxhmkJ0GrCZ8bvOvQG6tHhAhSm6yRx5GDNblw5LkU7HX8ssiiViFhbgG8WZ77'; // Change to the desired URL
+    });
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var readMoreButtons = document.querySelectorAll('.read-more');
     
@@ -18,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-/* FAQ PAGE*/
+/* TO OPEN FAQS*/
 
 
 const questions = document.querySelectorAll(".question");
@@ -55,7 +87,7 @@ questions.forEach(question => {
     }); 
 });
 
-/* HEADER CHANGE */
+/* HEADER CHANGE ON SCROLL */
 
 // Select the header element
 const header = document.getElementById('header-top');
@@ -74,68 +106,7 @@ function changeHeaderBackground() {
 // Event listener for scroll event
 window.addEventListener('scroll', changeHeaderBackground);
 
-/* TESTIMONIAL */
 
-// Access the testimonials
-    let testSlide = document.querySelectorAll('.testItem');
-    // Access the indicators
-    let dots = document.querySelectorAll('.dot');
 
-    var counter = 0;
 
-    // Add click event to the indicators
-    function switchTest(currentTest){
-        currentTest.classList.add('active');
-        var testId = currentTest.getAttribute('attr');
-        if(testId > counter){
-            testSlide[counter].style.animation = 'next1 1.0s ease-in forwards';
-            counter = testId;
-            testSlide[counter].style.animation = 'next2 1.0s ease-in forwards';
-        }
-        else if(testId == counter){return;}
-        else{
-            testSlide[counter].style.animation = 'prev1 1.0s ease-in forwards';
-            counter = testId;
-            testSlide[counter].style.animation = 'prev2 1.0s ease-in forwards';
-        }
-        indicators();
-    }
 
-    // Add and remove active class from the indicators
-    function indicators(){
-        for(i = 0; i < dots.length; i++){
-            dots[i].className = dots[i].className.replace(' active', '');
-        }
-        dots[counter].className += ' active';
-    }
-
-    // Code for auto sliding
-    function slideNext(){
-        testSlide[counter].style.animation = 'next1 1.0s ease-in forwards';
-        if(counter >= testSlide.length - 1){
-            counter = 0;
-        }
-        else{
-            counter++;
-        }
-        testSlide[counter].style.animation = 'next2 1.0s ease-in forwards';
-        indicators();
-    }
-    function autoSliding(){
-        deleteInterval = setInterval(timer, 4500);
-        function timer(){
-            slideNext();
-            indicators();
-        }
-    }
-    autoSliding();
-
-    // Stop auto sliding when mouse is over the indicators
-    const container = document.querySelector('.indicators');
-    container.addEventListener('mouseover', pause);
-    function pause(){
-        clearInterval(deleteInterval);
-    }
-
-    // Resume sliding when mouse is out of the indicators
-    container.addEventListener('mouseout', autoSliding);

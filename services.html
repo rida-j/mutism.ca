@@ -39,13 +39,31 @@
 		<div class="nav-links">
 			<ul class="link-list calls">
 				<li class="call-list">Contact Us</li >
-				<li class="call-list">Donate </li >
+					<li class="call-list" id="openPopup"><a href="#">Donate</a></li >
 			</ul>
 		</div>
 		
 	</div>
 
 	</header>
+
+		<!-- DONATE BUTTON -->
+	<div id="myModal" class="modal">
+	    <div class="modal-content">
+    	<p style="font-size:36px; color: var(--secondary-color);">&#x2665;</p>
+	        <p>The Selective Mutism Foundation (SMF) is a registered nonprofit organization with the mission to <b>(1)</b> collaborate on education, awareness and treatment for Selective Mutism; and <b>(2)</b> enable individuals to find their voice and overcome barriers. </p>
+
+	        	<p>The vision of the foundation is to be a respected leader in awareness, education and treatment for individuals who affected by Selected Mutism; and to provide a common ground where people with SM from all over the world can network and support one another.</p>
+
+	        <p>Since SMF is a nonprofit organization (not a charity), we are not eligible for many, if not most, funding opportunities. Hence, your donation will assist us to carry on our mission, and continue to make positive impacts for those impacted by selective mutism.</p>
+
+	        <p>Any amount is greatly appreciated!</p>
+
+	        <button class="yes" id="yesButton">Yes, I'd like to Donate!</button>
+	        <button class="no" id="noButton">No thanks</button>
+	    </div>
+	</div>
+
 
 
 	<!-- main body -->
@@ -74,7 +92,12 @@
 
 
 		<!-- all services table -->
-		<section class="inner-table" id="services">
+			<!-- past events header -->
+		<section class="inner-header">
+			<h1 id="services">Workshops</h1>
+		</section>
+
+		<section class="inner-table" >
 
 			<!-- 1 -->
 
@@ -146,7 +169,7 @@
 			</div>
 
 
-			<!-- EXTRA -->
+			<!-- 5 -->
 			
 			<div class="table-box">
 				
@@ -157,11 +180,46 @@
 			<div class="table-box-info">
 					<p>To the best of our knowledge, Dr. Bork is the first researcher to propose using software applications to help shape verbal behaviour (Bork, 2010). As a result, In this workshop, Dr. Bork shares her current research and the implication of using virtual reality for SM intervention.</p>
 
-<p>Moreover, Dr. Bork also discusses her next project with researchers from Computer Science and Mathematics using Machine Learning (a branch of Artificial Intelligence) to treat SM.</p>
+					<p>Moreover, Dr. Bork also discusses her next project with researchers from Computer Science and Mathematics using Machine Learning (a branch of Artificial Intelligence) to treat SM.</p>
 
-<p>We encourage researchers, budding researchers, and or individuals who are interested in learning more about SM and wish to collaborate on research studies to attend.</p>
+					<p>We encourage researchers, budding researchers, and or individuals who are interested in learning more about SM and wish to collaborate on research studies to attend.</p>
 
 					<p class="link-text"><a href="#">Contact us for more details ↗</a></p>
+				</div>
+				
+			</div>
+
+
+		
+
+		</section>
+
+
+				<!-- past events header -->
+		<div id="coaches-line"></div>
+		<section class="inner-header" id="coaches-header">
+			<h1>Coaching</h1>
+		</section>
+
+		<section class="inner-table" id="services">
+
+		
+
+			<!-- 6 -->
+
+				<div class="table-box">
+				
+				<div class="table-box-details">
+						<h3>Coaches</h3>
+				</div>
+			
+			<div class="table-box-info">
+					<p>*Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.*</p>
 				</div>
 				
 			</div>
@@ -169,12 +227,80 @@
 
 		</section>
 
+
 	</main>
 	
-	
-	<!-- footer -->
+<!-- footer -->
 	<footer>
-		© 2024 Selective Mutism Foundation. This website is for education and information purposes only.
+		<div class="footer-container">
+
+		<!-- row 1 -->
+		<div class="footer-row-one">
+			<div class="left-side">
+				
+				<!-- column 1 -->
+				<div class="footer-col">
+						<p class="column-header">Selective Mutism<br>Foundation</p>
+				</div>
+
+
+				<!-- column 2 -->
+				<div class="footer-col">
+					<p class="column-header">Get Help</p>
+					<ul class="footer-list">
+						<li><a href="resources.html">Resources</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+					</ul>
+				</div>
+
+				<!-- column 3 -->
+				<div class="footer-col">
+					<p class="column-header">Learn More</p>
+					<ul class="footer-list">
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="events.html">Events</a></li>
+						
+						<li><a href="testimonials.html">Testimonials</a></li>
+					</ul>
+				</div>
+
+			</div>
+			
+		
+			<div class="right-side">
+				
+				<!-- column 4 -->
+				<div class="footer-col">
+					<p class="column-header">Connect</p>
+
+					<div class="social-links">
+						<a href=""><img style="width:70px; height:auto; filter:invert(100%);" src="https://s3-alpha.figma.com/hub/file/2729732820/69ab2bc1-7dda-4bf6-ac0b-adcb3e70b063-cover.png"></a>
+						<a href="">hi</a>
+					</div>
+				</div>
+
+			</div>
+				
+		</div>
+
+		<!-- row 2 -->
+		<div class="footer-row-two">
+				
+			<!-- column 1 -->
+			<div class="footer-col">
+				
+			</div>
+
+			<!-- colum 2 -->
+			<div class="footer-col">
+				<p>© 2024 Selective Mutism Foundation. This website is for education and information purposes only.</p>
+			</div>
+				
+		</div>
+			
+		</div>
+	
 	</footer>
 
 
